@@ -13,8 +13,18 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()
-        ->times(2)
-        ->create();
+        $user = new User();
+        $user->name = 'Sam Downey';
+        $user->email = 'samdowney@larafest.ie';
+        $user->password = 'n00212512!';
+        $user->role_id = '1';
+        $user->save();
+
+        $user = new User();
+        $user->name = 'John Corrigan';
+        $user->email = 'johncorrigan@larafest.ie';
+        $user->password = 'castles1!';
+        $user->role_id = '2';
+        $user->save();
     }
 }

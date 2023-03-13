@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Screen;
 
 class ScreenSeeder extends Seeder
 {
@@ -12,6 +13,49 @@ class ScreenSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
+
+        $screen = new Screen();
+        $screen->save();
     }
 }

@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_role', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('role_id')->unsigned();
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->unsignedBigInteger('role_id');
 
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('restrict');
             $table->foreign('role_id')->references('id')->on('roles')->onUpdate('cascade')->onDelete('restrict');
         });
     }
@@ -27,6 +23,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_role');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign(['role_id']);
+            $table->dropColumn('role_id');
+        });
     }
 };
