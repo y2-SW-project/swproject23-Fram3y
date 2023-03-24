@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\MovieController as AdminMovieController;
+use App\Http\Controllers\User\MovieController as UserMovieController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +21,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/dashboard', function () {
+    return view('welcome');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.movies.index');
+
+Route::resource('/admin/movies', AdminMovieController::class)->middleware(['auth'])->names('admin.movies');
+
+
+// Route::get('/user/movies', UserMovieController::class)->middleware(['auth'])->names('user.movies');
