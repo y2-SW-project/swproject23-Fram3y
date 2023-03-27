@@ -72,31 +72,50 @@
     {{-- End of Advert Carousel --}}
 
     {{-- Screening in your area --}}
-    <div class="bg-primary">
-        <h2 class="d-flex justify-content-center text-light mt-5">Screening in your area</h2>
+    <div class="container-fluid p-0 bg-primary">
+        <div class="bg-primary">
+            <h2 class="d-flex justify-content-center text-light py-4">Screening in your area</h2>
+        </div>
+
+        <div class="d-flex justify-content-evenly">
+            @forelse ($movies as $movie)
+                <a href="{{ route('admin.movies.show', $movie) }}">
+                    <div>
+                        <img src="{{ asset('storage/images/' . $movie->movie_image) }}" width="200" height="300"
+                            alt="movieImage">
+                        <p class="d-flex justify-content-center text-light">{{ $movie->title }}</p>
+                    </div>
+                </a>
+            @empty
+        </div>
+        <div class="carousel-item">
+            <a href="{{ route('admin.movies.show', $movie) }}">
+                <div>
+                    <img src="{{ asset('storage/images/' . $movie->movie_image) }}" width="200" height="300"
+                        alt="movieImage">
+                    <p class="d-flex justify-content-center text-light">{{ $movie->title }}</p>
+                </div>
+            </a>
+        </div>
+        @endforelse
     </div>
+    {{-- End of Screening in your area --}}
 
-
-    <div id="ScreeningInYourArea" class="carousel slide">
+    {{-- 2nd Advert Carousel --}}
+    <div id="AdvertCarousel" class="carousel slide pt-4">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                @forelse ($movies as $movie)
-                    <a href="{{ route('admin.movies.show', $movie) }}">
-                        <div>
-                            <img src="" alt="">
-                            <p>{{ $movie->title }}</p>
-                        </div>
+                <img src="https://i.pinimg.com/originals/bf/82/f6/bf82f6956a32819af48c2572243e8286.jpg"
+                    class="d-block w-100 max-carousel-height" alt="advert-1">
             </div>
             <div class="carousel-item">
-
+                <img src="https://free4kwallpapers.com/uploads/originals/2019/11/20/bladerunner--movie-scene-wallpaper.jpg"
+                    class="d-block w-100 max-carousel-height" alt="advert-2">
             </div>
             <div class="carousel-item">
-
+                <img src="https://wallpaper.dog/large/20493504.jpg" class="d-block w-100 max-carousel-height"
+                    alt="advert-3">
             </div>
-            </a>
-        @empty
-            @endforelse
-
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -107,5 +126,63 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    {{-- End of Screening in your area --}}
+    {{-- End of 2nd Advert Carousel --}}
+
+    {{-- Special Offers --}}
+    <div class="container pt-4">
+        <div class="bg-primary">
+            <h2 class="d-flex justify-content-center text-light py-4">Special Offers</h2>
+        </div>
+
+        <div class="d-flex justify-content-evenly">
+            <div class="bg-light offer-width">
+                <img src="https://drogheda.arccinema.ie/articleimages/rsz_sweet_cinema_sunday_original_artwork.jpg"
+                    alt="special-offer-image" width="300">
+                <h4 class="ps-1 pt-3">Special Offer</h4>
+                <p class="ps-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea molestias voluptatibus
+                    temporibus
+                    non modi cupiditate omnis aperiam, ad provident nisi maxime hic, excepturi dolore ipsa incidunt debitis
+                    reprehenderit, quibusdam harum.
+                </p>
+            </div>
+
+            <div class="bg-light offer-width">
+                <img src="https://drogheda.arccinema.ie/articleimages/rsz_sweet_cinema_sunday_original_artwork.jpg"
+                    alt="special-offer-image" width="300">
+                <h4 class="ps-1 pt-3">Special Offer</h4>
+                <p class="ps-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea molestias voluptatibus
+                    temporibus
+                    non modi cupiditate omnis aperiam, ad provident nisi maxime hic, excepturi dolore ipsa incidunt debitis
+                    reprehenderit, quibusdam harum.
+                </p>
+            </div>
+
+            <div class="bg-light offer-width">
+                <img src="https://drogheda.arccinema.ie/articleimages/rsz_sweet_cinema_sunday_original_artwork.jpg"
+                    alt="special-offer-image" width="300">
+                <h4 class="ps-1 pt-3">Special Offer</h4>
+                <p class="ps-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea molestias voluptatibus
+                    temporibus
+                    non modi cupiditate omnis aperiam, ad provident nisi maxime hic, excepturi dolore ipsa incidunt debitis
+                    reprehenderit, quibusdam harum.
+                </p>
+            </div>
+
+            <div class="bg-light offer-width">
+                <img src="https://drogheda.arccinema.ie/articleimages/rsz_sweet_cinema_sunday_original_artwork.jpg"
+                    alt="special-offer-image" width="300">
+                <h4 class="ps-1 pt-3">Special Offer</h4>
+                <p class="ps-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea molestias voluptatibus
+                    temporibus
+                    non modi cupiditate omnis aperiam, ad provident nisi maxime hic, excepturi dolore ipsa incidunt debitis
+                    reprehenderit, quibusdam harum.
+                </p>
+            </div>
+        </div>
+    </div>
+    {{-- End of Special Offers --}}
+
+    {{-- Footer --}}
+
+    {{-- End of Footer --}}
 @endsection

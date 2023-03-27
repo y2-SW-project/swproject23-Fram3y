@@ -15,6 +15,7 @@ class MovieSeeder extends Seeder
     {
         $movies = new Movie();
         $movies->title = "Puss in Boots: The Last Wish";
+        $movies->movie_image = "Puss_in_Boots_The_Last_Wish_poster.jpg";
         $movies->synopsis = "This year, everyone’s favourite leche-loving...";
         $movies->director = "Joel Crawford, Januel Mercado";
         $movies->starring = "Da'Vine Joy Randolph, Wagner Moura, Samson Kayo, Harvey Guillén, John Mulaney, Anthony Mendez, Ray Winstone, Florence Pugh, Olivia Colman, Antonio Banderas, Salma Hayek";
@@ -24,6 +25,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "Scream VI";
+        $movies->movie_image = "scream_6_poster.jpg";
         $movies->synopsis = "Following the latest Ghostface killings, the four survivors leave Woodsboro behind and start a fresh chapter. In Scream VI, Melissa Barrera (“Sam Carpenter”), Jasmin Savoy Brown...";
         $movies->director = "Matt Bettinelli-Olpin, Tyler Gillett";
         $movies->starring = "Jenna Ortega, Dermot Mulroney, Henry Czerny, Jasmin Savoy Brown, Melissa Barrera, Mason Gooding, Liana Liberato, Hayden Panettiere, Jack Champion, Devyn Nekoda, Josh Segarra, Tony Revolori, Courteney Cox, Samara Weaving";
@@ -33,6 +35,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "The Super Mario Bros. Movie";
+        $movies->movie_image = "The-Super-Mario-Bros.-Movie-poster.jpg";
         $movies->synopsis = "A plumber named Mario travels through an underground labyrinth with his brother, Luigi, trying to save a captured princess. Feature film adaptation of the popular video game...";
         $movies->director = "Michael Jelenic, Aaron Horvath";
         $movies->starring = "Seth Rogen, Charlie Day, Kevin Michael Richardson, Fred Armisen, Sebastian Maniscalco, Jack Black, Keegan-Michael Key, Chris Pratt, Anya Taylor-Joy";
@@ -42,6 +45,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "Creed III";
+        $movies->movie_image = "creed_3_movie_poster.jpg";
         $movies->synopsis = "After dominating the boxing world, Adonis Creed (Michael B. Jordan) has been thriving in both his career and family life...";
         $movies->director = "Michael B. Jordan";
         $movies->starring = "Florian Munteanu, Tessa Thompson, Wood Harris, Jonathan Majors, Michael B. Jordan, Phylicia Rashad";
@@ -51,6 +55,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "65";
+        $movies->movie_image = "65_movie_poster.jpg";
         $movies->synopsis = "After a catastrophic crash on an unknown planet, pilot Mills (Adam Driver) quickly discovers he’s actually stranded on Earth… 65 million years ago. Now, with only one chance at rescue, Mills and the only other survivor...";
         $movies->director = "Scott Beck, Bryan Woods";
         $movies->starring = "Adam Driver, Chloe Coleman, Ariana Greenblatt";
@@ -60,6 +65,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "Cocaine Bear";
+        $movies->movie_image = "cocaine_bear_poster.jpg";
         $movies->synopsis = "Inspired by the 1985 true story of a drug runner's plane crash...";
         $movies->director = "Elizabeth Banks";
         $movies->starring = "Kristofer Hivju, Brooklynn Prince, Alden Ehrenreich, Jesse Tyler Ferguson, Christian Convery, Kahyun Kim, Scott Seiss, Margo Martindale, O'Shea Jackson Jr., Keri Russell, Ray Liotta";
@@ -69,6 +75,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "Guardians of The Galaxy Vol.3";
+        $movies->movie_image = "gog_3_poster.jpg";
         $movies->synopsis = "In Marvel Studios “Guardians of the Galaxy Vol. 3” our beloved band of misfits are looking a bit different these days. Peter Quill, still reeling from the loss of Gamora...";
         $movies->director = "James Gunn";
         $movies->starring = "Bradley Cooper, Elizabeth Debicki, Dave Bautista, Vin Diesel, Will Poulter, Maria Bakalova, Chukwudi Iwuji, Karen Gillan, Chris Pratt, Zoe Saldana, Pom Klementieff, Sean Gunn";
@@ -78,6 +85,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "What's Love Got to do With it?";
+        $movies->movie_image = "whats_love_poster.jpg";
         $movies->synopsis = "How do you find lasting love in today's world? For documentary filmmaker Zoe (Lily James), swiping right to find Mr Right has only delivered bad dates and funny anecdotes...";
         $movies->director = "Shekhar Kapur";
         $movies->starring = "Lily James, Shazad Latif, Asim Chaudhry, Sajal Ali, Shabana Azmi, Emma Thompson";
@@ -87,6 +95,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "Indiana Jones And The Dial of Destiny";
+        $movies->movie_image = "indiana_jones_poster.jpg";
         $movies->synopsis = "Harrison Ford returns as the legendary hero archaeologist in the highly anticipated fifth installment of the iconic “Indiana Jones” franchise...";
         $movies->director = "James Mangold";
         $movies->starring = "Harrison Ford, John Rhys-Davies, Toby Jones, Boyd Holbrook, Thomas Kretschmann, Shaunette Renee Wilson, Oliver Richters, Ethann Isidore, Phoebe Waller-Bridge, Antonio Banderas, Mads Mikkelsen";
@@ -96,6 +105,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "Rendfield";
+        $movies->movie_image = "renfield_poster.jpg";
         $movies->synopsis = "Evil doesn’t span eternity without a little help. In this modern monster tale of Dracula’s loyal servant, Nicholas Hoult...";
         $movies->director = "Chris McKay";
         $movies->starring = "Ben Schwartz, Nicolas Cage, Adrian Martinez, Awkwafina , Shohreh Aghdashloo, Nicholas Hoult";
@@ -105,6 +115,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "Shazam! Fury of The Gods";
+        $movies->movie_image = "shazam_poster.jpg";
         $movies->synopsis = "From New Line Cinema comes “Shazam! Fury of the Gods,” which continues the story of teenage Billy Batson...";
         $movies->director = "David F. Sandberg";
         $movies->starring = "Lucy Liu, Rachel Zegler, Adam Brody, Zachary Levi, Asher Angel, Marta Milans, Helen Mirren, Jack Dylan Grazer";
@@ -114,6 +125,7 @@ class MovieSeeder extends Seeder
 
         $movies = new Movie();
         $movies->title = "Spider-Man: Across The Spider-Verse";
+        $movies->movie_image = "";
         $movies->synopsis = "Miles Morales returns for the next chapter of the Oscar®-winning Spider-Verse saga...";
         $movies->director = "Joaquim Dos Santos, Justin K. Thompson, Kemp Powers";
         $movies->starring = "Oscar Isaac, Shea Whigham, Issa Rae, Jason Schwartzman, Rachel Dratch, Luna Lauren Velez, Greta Lee, Brian Tyree Henry, Hailee Steinfeld, Shameik Moore, Jorma Taccone";
