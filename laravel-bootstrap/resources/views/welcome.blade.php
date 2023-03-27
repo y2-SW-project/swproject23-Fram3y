@@ -22,21 +22,46 @@
 </head>
 
 {{-- Log in / Register --}}
-<body class="bg-primary bg-gradient">
-    <div>
-        <div>
-            <h1>Welcome to Presto</h1>
-            
-        </div>
+
+<body class="bg-primary">
+    <div class="d-flex justify-content-center text-light mt-4">
+        <h1>Welcome to Presto</h1>
     </div>
-    
+    <div class="d-flex justify-content-center text-light mx-3">
+
+        @guest
+            <a href="{{ route('login') }}" class="text-light">Log in</a>
+            <a href="{{ route('register') }}" class="text-light">Register</a>
+
+        </div>
+        <div class="d-flex justify-content-center text-light mx-3">
+
+        </div>
+    @endguest
+
+    @auth
+        <a class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+    @endauth
 
 
-                    {{-- End of Log in / Register / Nav Section --}}
 
-                    {{-- Welcome to Presto Films Section --}}
 
-                    {{-- End of Welcome to Presto Films Section --}}
+<main>
+    @yield('content')
+</main>
+    {{-- End of Log in / Register / Nav Section --}}
+
+    {{-- Welcome to Presto Films Section --}}
+
+    {{-- End of Welcome to Presto Films Section --}}
 </body>
 
 </html>

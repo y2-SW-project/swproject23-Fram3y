@@ -1,56 +1,12 @@
 // Fonts
 @import url('https://fonts.bunny.net/css?family=Nunito');
 
-// Functions
-@import '/node_modules/bootstrap/scss/functions';
-
-// Global Variables
-$enable-rounded: true;
-$enable-shadows: true;
-$enable-gradients: true;
-
 // Variables
-@import '/node_modules/bootstrap/scss/variables';
+@import 'variables';
 
-// Mixins
-@import '/node_modules/bootstrap/scss/mixins';
-
-// Import Carousels
-@import "../node_modules/bootstrap/scss/carousel";
-
-// Removing Origial Colour Pallete
-$theme-colors: map-remove($theme-colors, "danger", "primary", "secondary", "success", "danger", "warning", "info");
-
-// My Colour Colour Pallete
-$custom-colors: (
-  "test": rgb(255, 211, 67),
-  "primary": rgb(219, 49, 49),
-  "b-grey": rgb(244,244,244),
-);
-
-$theme-colors: map-merge($theme-colors, $custom-colors);
-
-// Custom Spacing
-$spacer: 1rem;
-
-$spacers: (
-  0: 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer,
-  4: $spacer * 2,
-  5: $spacer * 4,
-  6: $spacer * 5,
-  7: $spacer * 48,
-);
-
-// rounded
-$border-radius: 0.375rem;
-$border-radius-sm: 0.25rem;
-$border-radius-lg: 0.5rem;
-$border-radius-xl: 1rem;
-$border-radius-2xl: 2rem;
-$border-radius-pill: 3rem;
+.max-carousel-height{
+    max-height: 20rem;
+}
 
 // Bootstrap
-@import '/node_modules/bootstrap/scss/bootstrap.scss';
+@import 'bootstrap/scss/bootstrap';

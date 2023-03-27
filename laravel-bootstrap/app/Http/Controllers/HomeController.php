@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
 
 class HomeController extends Controller
 {
@@ -25,11 +28,11 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         $home = 'home';
-        
+
         if($user->hasRole('admin')){
-            $home = 'admin.movies.index';
+           $home = 'admin.movies.index';
         }
-        else if($user->hasRole('user')){
+        else if ($user->hasRole('user')){
             $home = 'user.movies.index';
         }
         return redirect()->route($home);

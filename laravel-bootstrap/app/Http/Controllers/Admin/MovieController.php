@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\Collection;
 use App\Models\User;
 use App\Models\Movie;
 use App\Models\Genre;
@@ -21,6 +22,8 @@ class MovieController extends Controller
 
         // Definintion of Movies
         $movies = Movie::all();
+
+        $movies = Movie::paginate(4);
 
         // Route to home page
         return view('admin.movies.index')->with('movies', $movies);

@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Role extends Model
 {
     use HasFactory;
-    protected $fillable = ["name", "description"];
+
+    //this function allows you to do the $role->users which will return all users for that role
+    public function users()
+    {
+        return $this->belongsToMany('App\Models\User', 'user_role');
+    }
 }

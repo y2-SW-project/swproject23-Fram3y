@@ -22,12 +22,15 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('welcome');
+    return view('movies');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.movies.index');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('/admin/movies', AdminMovieController::class)->middleware(['auth'])->names('admin.movies');
 
+// Route::resource('/user/movies', UserMovieController::class)->middleware(['auth'])->names('user.movies');
 
-// Route::get('/user/movies', UserMovieController::class)->middleware(['auth'])->names('user.movies');
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
