@@ -87,14 +87,18 @@ class MovieController extends Controller
         return to_route('admin.movies.index');
     }
 
-    public function show(Movie $movie)
+    public function show(Movie $movies)
     {
-        // Definition of Movies and Genres
+        // Definition of Genres
         $movies = Movie::all();
-        $genres = Genre::where('id', $movie->genre_id)->firstOrFail();
+        $movies = Movie::paginate(1);
+        
+        $cinemas = Cinema::all();
+        // $genres = Genre::where('id', $movies->genre_id)->firstOrFail();
+        // $genres = Genre::paginate(1);
 
         // Route to The Show Movie Page
-        return view('admin.movies.show')->with('movies', $movies)->with('genres', $genres);
+        return view('admin.movies.show')->with('movies', $movies);
     }
 
     public function edit(Movie $movie)
