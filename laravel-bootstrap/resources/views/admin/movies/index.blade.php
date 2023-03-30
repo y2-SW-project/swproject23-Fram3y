@@ -72,13 +72,24 @@
     {{-- End of Advert Carousel --}}
 
     {{-- Screening in your area --}}
-    <div class="container-fluid p-0 bg-primary">
-        <div class="bg-primary">
-            <h2 class="d-flex justify-content-center text-light py-4">Screening in your area</h2>
-        </div>
-
-        <div class="d-flex justify-content-evenly">
-            @forelse ($movies as $movie)
+    <div class="bg-primary">
+        <div class="container p-0 bg-primary">
+            <div class="bg-primary">
+                <h2 class="d-flex justify-content-center text-light py-4">Screening in your area</h2>
+            </div>
+    
+            <div class="d-flex justify-content-evenly">
+                @forelse ($movies as $movie)
+                    <a href="{{ route('admin.movies.show', $movie) }}">
+                        <div>
+                            <img src="{{ asset('storage/images/' . $movie->movie_image) }}" width="200" height="300"
+                                alt="movieImage">
+                            <p class="d-flex justify-content-center text-light">{{ $movie->title }}</p>
+                        </div>
+                    </a>
+                @empty
+            </div>
+            <div class="carousel-item">
                 <a href="{{ route('admin.movies.show', $movie) }}">
                     <div>
                         <img src="{{ asset('storage/images/' . $movie->movie_image) }}" width="200" height="300"
@@ -86,50 +97,22 @@
                         <p class="d-flex justify-content-center text-light">{{ $movie->title }}</p>
                     </div>
                 </a>
-            @empty
+            </div>
+            @endforelse
         </div>
-        <div class="carousel-item">
-            <a href="{{ route('admin.movies.show', $movie) }}">
-                <div>
-                    <img src="{{ asset('storage/images/' . $movie->movie_image) }}" width="200" height="300"
-                        alt="movieImage">
-                    <p class="d-flex justify-content-center text-light">{{ $movie->title }}</p>
-                </div>
-            </a>
-        </div>
-        @endforelse
     </div>
+    
     {{-- End of Screening in your area --}}
 
-    {{-- 2nd Advert Carousel --}}
-    <div id="AdvertCarousel" class="carousel slide pt-4">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://i.pinimg.com/originals/bf/82/f6/bf82f6956a32819af48c2572243e8286.jpg"
+    {{-- Advert --}}
+    <div class="pt-4">
+                <img src="https://i0.wp.com/www.blogtorwho.com/wp-content/uploads/2022/04/Doctor-Who-Daleks-Movies-Poster-Wide-scaled.jpg?fit=2560%2C1920&ssl=1"
                     class="d-block w-100 max-carousel-height" alt="advert-1">
-            </div>
-            <div class="carousel-item">
-                <img src="https://free4kwallpapers.com/uploads/originals/2019/11/20/bladerunner--movie-scene-wallpaper.jpg"
-                    class="d-block w-100 max-carousel-height" alt="advert-2">
-            </div>
-            <div class="carousel-item">
-                <img src="https://wallpaper.dog/large/20493504.jpg" class="d-block w-100 max-carousel-height"
-                    alt="advert-3">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-    {{-- End of 2nd Advert Carousel --}}
+    {{-- End of Advert --}}
 
     {{-- Special Offers --}}
-    <div class="container pt-4">
+    <div class="container p-0 py-4">
         <div class="bg-primary">
             <h2 class="d-flex justify-content-center text-light py-4">Special Offers</h2>
         </div>
@@ -183,6 +166,33 @@
     {{-- End of Special Offers --}}
 
     {{-- Footer --}}
-
+    <div class="bg-secondary">
+        <div class="container d-flex justify-content-evenly p-0 pt-5">
+            <ul class="text-light">
+                <h5>Cookie Policy</h5>
+                <h5>Privacy and Legal</h5>
+                <h5>Corporate Responsibility</h5>
+                <h5>Modern Slavery Statement</h5>
+            </ul>
+            <ul class="text-light">
+                <h5>Contact Us</h5>
+                <h5>Help</h5>
+                <h5>Accessibility</h5>
+                <h5>Allergen Information</h5>
+            </ul>
+            <ul class="text-light">
+                <h5>About Us</h5>
+                <h5>Careers</h5>
+                <h5>Corporate Events</h5>
+                <h5>Presto Scene</h5>
+            </ul>
+            <ul class="text-light">
+                <h5>iOS App</h5>
+                <h5>Android App</h5>
+                <h5>Employee Applications</h5>
+                <h5>Licensing Agreements</h5>
+            </ul>
+        </div>
+    </div>
     {{-- End of Footer --}}
 @endsection

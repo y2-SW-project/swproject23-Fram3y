@@ -23,7 +23,7 @@ class MovieController extends Controller
         // Definintion of Movies
         $movies = Movie::all();
 
-        $movies = Movie::paginate(6);
+        $movies = Movie::paginate(5);
 
         // Route to home page
         return view('admin.movies.index')->with('movies', $movies);
@@ -89,8 +89,9 @@ class MovieController extends Controller
 
     public function show(Movie $movie)
     {
-        // Definition of Genres
-        $genres = Genre::where('id', $movie->texture_id)->firstOrFail();
+        // Definition of Movies and Genres
+        $movies = Movie::all();
+        $genres = Genre::where('id', $movie->genre_id)->firstOrFail();
 
         // Route to The Show Movie Page
         return view('admin.movies.show')->with('movies', $movies)->with('genres', $genres);
