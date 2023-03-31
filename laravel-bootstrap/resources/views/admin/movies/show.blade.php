@@ -137,7 +137,7 @@
                 <h5>Cookie Policy</h5>
                 <h5>Privacy and Legal</h5>
                 <h5>Corporate Responsibility</h5>
-                <h5>Modern Slavery Statement</h5>
+                <h5>Professional Rizzemé</h5>
             </ul>
             <ul class="text-light">
                 <h5>Contact Us</h5>
