@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('screening', function (Blueprint $table) {
+        Schema::create('screenings', function (Blueprint $table) {
             $table->id();
             $table->date('date');
             $table->time('time');
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('screening');
+        Schema::dropIfExists('screenings');
     }
 };

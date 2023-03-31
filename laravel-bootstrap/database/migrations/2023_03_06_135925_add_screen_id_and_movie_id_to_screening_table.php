@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('screening', function (Blueprint $table) {
+        Schema::table('screenings', function (Blueprint $table) {
             $table->unsignedBigInteger('screen_id');
             $table->unsignedBigInteger('movie_id');
 
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('screening', function (Blueprint $table) {
+        Schema::table('screenings', function (Blueprint $table) {
             $table->dropForeign(['screen_id']);
             $table->dropColumn('screen_id');
 

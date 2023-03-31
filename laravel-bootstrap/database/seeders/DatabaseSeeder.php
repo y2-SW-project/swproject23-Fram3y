@@ -10,6 +10,7 @@ use Database\Seeders\MovieSeeder;
 use Database\Seeders\GenreSeeder;
 use Database\Seeders\ScreenSeeder;
 use Database\Seeders\UserSeeder;
+use Database\Seeders\ScreeningSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,5 +25,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MovieSeeder::class);
         $this->call(ScreenSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(ScreeningSeeder::class);
     }
 }

@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Collection;
 use App\Models\User;
 use App\Models\Movie;
 use App\Models\Genre;
+use App\Models\Cinema;
+use App\Models\Screening;
 
 class MovieController extends Controller
 {
@@ -87,18 +89,17 @@ class MovieController extends Controller
         return to_route('admin.movies.index');
     }
 
-    public function show(Movie $movies)
+    public function show(Movie $movie)
     {
         // Definition of Genres
-        $movies = Movie::all();
-        $movies = Movie::paginate(1);
+        // $movies = Movie::all();
+        // $movies = Movie::paginate(1);
         
         $cinemas = Cinema::all();
-        // $genres = Genre::where('id', $movies->genre_id)->firstOrFail();
-        // $genres = Genre::paginate(1);
-
+        $screenings = Screening::all();
+        
         // Route to The Show Movie Page
-        return view('admin.movies.show')->with('movies', $movies);
+        return view('admin.movies.show')->with('movie', $movie)->with('cinemas', $cinemas)->with('screenings', $screenings);
     }
 
     public function edit(Movie $movie)
@@ -108,7 +109,7 @@ class MovieController extends Controller
         $user->authorizeRoles('admin');
 
         // Definition of Movies and Genres
-        $movies = Movie::all();
+        $movies = Movie::with('id');
         $genres = Genre::all();
 
         // Route to Edit Page

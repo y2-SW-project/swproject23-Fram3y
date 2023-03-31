@@ -14,7 +14,7 @@ class CinemaSeeder extends Seeder
     public function run(): void
     {
         $cinema = new Cinema();
-        $cinema->name = "IMC Dun Laoughaire";
+        $cinema->name = "IMC Dun Laoghaire";
         $cinema->address_line_1 = "Bloomfield Shopping Centre";
         $cinema->address_line_2 = "George's Street Lower";
         $cinema->town = "Dún Laoghaire";

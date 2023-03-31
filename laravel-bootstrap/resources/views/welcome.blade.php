@@ -54,9 +54,9 @@
 
 
 
-<main>
-    @yield('content')
-</main>
+    <main>
+        @yield('content')
+    </main>
     {{-- End of Log in / Register / Nav Section --}}
 
     {{-- Welcome to Presto Films Section --}}
